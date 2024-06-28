@@ -19,7 +19,7 @@ namespace WalletConnectUnity.Core.Networking
 
         public string Platform { get; set; }
     }
-
+    [System.Serializable]
     public class GetWalletsResponse
     {
         public int count;

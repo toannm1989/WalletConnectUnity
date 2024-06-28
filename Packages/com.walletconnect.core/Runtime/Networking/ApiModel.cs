@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
-
+using System.Collections.Generic;
+using System.Linq;
 namespace WalletConnectUnity.Core.Networking
 {
     public struct UrlQueryParams
@@ -21,11 +22,20 @@ namespace WalletConnectUnity.Core.Networking
 
     public class GetWalletsResponse
     {
-        [JsonProperty("count")] public int Count { get; set; }
+        public int count;
+        public List<Wallet> data;
+        [System.NonSerialized]
+        public int Count { get { return count; } set { count = value; } }
+        [System.NonSerialized]
+        public Wallet[] Data { 
+            get {
+                return data.ToArray();
+            } 
+            set {
+                data = value.ToList();
+            } 
+        }
 
-        [JsonProperty("data")] public Wallet[] Data { get; set; }
-
-        [JsonConstructor] public GetWalletsResponse(){ }
     }
 
     public class Wallet

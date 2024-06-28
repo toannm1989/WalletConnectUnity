@@ -35,7 +35,7 @@ namespace WalletConnectUnity.Core.Networking
         }
 
     }
-[   System.Serializable]
+    [System.Serializable]
     public class Wallet
     {
         public string id;
@@ -50,7 +50,7 @@ namespace WalletConnectUnity.Core.Networking
         public string image_id;
         public string ImageId { get => image_id; set{image_id = value;} }
 
-        public string order;
+        public int order;
         public int Order { get => order; set{order = value;} }
 
         public string mobile_link;

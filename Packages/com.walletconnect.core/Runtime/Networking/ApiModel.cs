@@ -38,24 +38,34 @@ namespace WalletConnectUnity.Core.Networking
 
     public class Wallet
     {
-        [JsonProperty("id")] public string Id { get; set; }
+        public string id;
+        public string Id { get => id; set {id = value;} }
 
-        [JsonProperty("name")] public string Name { get; set; }
+        public string name;
+        public string Name { get => name; set{name = value;} }
+        
+        public string homepage;
+        public string Homepage { get => homepage; set{homepage=value;} }
 
-        [JsonProperty("homepage")] public string Homepage { get; set; }
+        public string image_id;
+        public string ImageId { get => image_id; set{image_id = value;} }
 
-        [JsonProperty("image_id")] public string ImageId { get; set; }
+        public string order;
+        public int Order { get => order; set{order = value;} }
 
-        [JsonProperty("order")] public int Order { get; set; }
+        public string mobile_link
+        public string MobileLink { get => mobile_link; set{mobile_link = value;} }
 
-        [JsonProperty("mobile_link")] public string MobileLink { get; set; }
+        public string desktop_link;
+        public string DesktopLink { get => desktop_link; set{desktop_link = value;} }
 
-        [JsonProperty("desktop_link")] public string DesktopLink { get; set; }
+        public string webapp_link;
+        public string WebappLink { get => webapp_link; set{webapp_link = value;} }
 
-        [JsonProperty("webapp_link")] public string WebappLink { get; set; }
+        public string app_store;
+        public string AppStore { get => app_store; set{app_store = value}}
 
-        [JsonProperty("app_store")] public string AppStore { get; set; }
-
-        [JsonProperty("play_store")] public string PlayStore { get; set; }
+        public string play_store;
+        public string PlayStore { get => play_store; set{play_store = value;} }
     }
 }

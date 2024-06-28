@@ -24,6 +24,8 @@ namespace WalletConnectUnity.Core.Networking
         [JsonProperty("count")] public int Count { get; set; }
 
         [JsonProperty("data")] public Wallet[] Data { get; set; }
+
+        [JsonConstructor] public GetWalletsResponse(){ }
     }
 
     public class Wallet

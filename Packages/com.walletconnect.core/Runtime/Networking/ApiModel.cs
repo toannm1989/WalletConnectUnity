@@ -35,7 +35,7 @@ namespace WalletConnectUnity.Core.Networking
         }
 
     }
-
+[   System.Serializable]
     public class Wallet
     {
         public string id;
@@ -53,7 +53,7 @@ namespace WalletConnectUnity.Core.Networking
         public string order;
         public int Order { get => order; set{order = value;} }
 
-        public string mobile_link
+        public string mobile_link;
         public string MobileLink { get => mobile_link; set{mobile_link = value;} }
 
         public string desktop_link;
@@ -63,7 +63,7 @@ namespace WalletConnectUnity.Core.Networking
         public string WebappLink { get => webapp_link; set{webapp_link = value;} }
 
         public string app_store;
-        public string AppStore { get => app_store; set{app_store = value}}
+        public string AppStore { get => app_store; set{app_store = value;}}
 
         public string play_store;
         public string PlayStore { get => play_store; set{play_store = value;} }

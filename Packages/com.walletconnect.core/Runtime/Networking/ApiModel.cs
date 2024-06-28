@@ -24,9 +24,7 @@ namespace WalletConnectUnity.Core.Networking
     {
         public int count;
         public List<Wallet> data;
-        [System.NonSerialized]
         public int Count { get { return count; } set { count = value; } }
-        [System.NonSerialized]
         public Wallet[] Data { 
             get {
                 return data.ToArray();

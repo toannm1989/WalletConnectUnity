@@ -171,7 +171,7 @@ namespace WalletConnectUnity.Modal.Views
                 Debug.LogError($"[WalletConnectUnity] Failed to get wallets: {uwr.error}", this);
                 yield break;
             }
-
+            Debug.LogWarning($"[WalletConnectUnity.WalletSearchView] Bienvt get wallets: {uwr.downloadHandler.text}", this);
             var response = JsonConvert.DeserializeObject<GetWalletsResponse>(uwr.downloadHandler.text);
 
             _noWalletFound.SetActive(response.Count == 0);

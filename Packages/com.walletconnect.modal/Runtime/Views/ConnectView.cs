@@ -153,6 +153,7 @@ namespace WalletConnectUnity.Modal.Views
                 yield break;
             }
 
+            Debug.LogWarning($"[WalletConnectUnity.ConnectView] Bienvt get wallets: {uwr.downloadHandler.text}", this);
             var response = JsonConvert.DeserializeObject<GetWalletsResponse>(uwr.downloadHandler.text);
 
             for (var walletDataIndex = listItemIndex; walletDataIndex < walletsToLoad; walletDataIndex++)
